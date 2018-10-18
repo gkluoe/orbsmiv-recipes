@@ -63,6 +63,8 @@
 				<dict>
 					<key>pkgdir</key>
 					<string>%RECIPE_CACHE_DIR%</string>
+					<key>scripts</key>
+					<string>scripts/audiosculpt</string>
 					<key>id</key>
 					<string>%BUNDLE_ID%</string>
 					<key>version</key>

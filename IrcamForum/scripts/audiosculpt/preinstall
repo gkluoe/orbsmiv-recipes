@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Remove all previous Audiosculpt folders. 
+# If we don't find any, just exit cleanly.
+
+if ! ls -d /Applications/AudioSculpt* 2>/dev/null
+then
+    echo "No previous installation found"
+    exit 0
+fi
+
+ls -d /Applications/AudioSculpt* | while read audiosculptPath
+do 
+    if [ -d "$audiosculptPath" ]
+    then
+        echo "Removing $audiosculptPath"
+        rm -r "$audiosculptPath"
+    fi
+done
+exit 0
